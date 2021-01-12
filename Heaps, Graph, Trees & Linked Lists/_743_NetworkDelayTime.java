@@ -28,7 +28,8 @@ class _743_NetworkDelayTime {
             if(graph.containsKey(v[0]) && !visited.contains(v[0])){
                 visited.add(v[0]);
             for(int neigh[]: graph.get(v[0])){
-                minDistance[neigh[0]]=Math.min(minDistance[neigh[0]],minDistance[v[0]]+neigh[1]);
+                minDistance[neigh[0]]=Math.min(minDistance[neigh[0]],minDistance[v[0]]+neigh[1]); 
+                // Minimum (Distance that the Current neigh of v already has, current vertex(v) distance + edge weight(v,Current neigh of v)) (added later CN)
                 q.offer(new int[]{neigh[0], minDistance[neigh[0]]});
             }}
         }
