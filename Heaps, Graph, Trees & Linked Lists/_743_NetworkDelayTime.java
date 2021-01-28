@@ -1,5 +1,5 @@
 //done after 787! on own but my solution is slow - maybe due to hashmap. 
-// PQ for dijkstra!, notmal queue for bfs
+// PQ for dijkstra!, normal queue for bfs
 
 // Important note for Dijkstra using PQ: Priority queue removes the need of the array 'minDistance'. because, the elements tht
 // are popped later will always have a greater distance than the previous ones!

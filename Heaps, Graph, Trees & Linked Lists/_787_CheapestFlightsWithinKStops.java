@@ -46,7 +46,7 @@ class _787_CheapestFlightsWithinKStops {
 
 
 
-/* my first code JUST FOR DIJKSTRA wrong
+/* my first code JUST FOR DIJKSTRA (wrong)
 import java.util.*;
 class Solution {
     class edge{

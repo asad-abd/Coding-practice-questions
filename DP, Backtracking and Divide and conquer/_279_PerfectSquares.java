@@ -23,6 +23,8 @@ class _279_PerfectSquares {
             // dp[n - 9] + 1,
             // dp[n - 16] + 1
             // and so on...
+            // Why n-(j*j)? => We are basically saying that the perfect square that we may consider adding 
+            // at this step is j*j. but then take the minimum of all such n-(j*j)
             /*
              * for (int j = 1; j <= sqrt; j++) { int dif = i - j * j; dp[i] =
              * Math.min(dp[i], (dp[dif] + 1)); }
