@@ -19,4 +19,16 @@ class _997_FindTheTownJudge {
         else
             return judge;
     }
+    // THIS IS INCORRECT eg: 1->2->3. below code returns 3 but 1 doesn't trust 3!!(4-2-21)
+    public int findJudge(int N, int[][] trust) {
+        int outDegree[] = new int[N];
+        for(int pair[] : trust){
+            outDegree[pair[0]-1]++;
+        }
+        for(int i=0;i<N;i++ ){
+            if( outDegree[i]==0)
+                return i+1;
+        }
+        return -1;
+    }
 }
