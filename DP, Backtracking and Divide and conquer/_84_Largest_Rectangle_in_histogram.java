@@ -1,6 +1,6 @@
 public class _84_Largest_Rectangle_in_histogram {//lc_hard
     //IMP
-    //Idea: notice that the min area would be if we take just one height*1. so, keeoing that in mind,
+    //Idea: notice that the min area would be if we take just one height*1. so, keeping that in mind,
     //we will say that, consider the i'th height in full and find which heights on the left and right can also be taken with it.
     
     public int[] inflectionPointR(int []heights, int precompute[]){//returns the largest index(I) on the RHS of 'i' s.t. heights at all indices till 'I'(including I) are >= height at i.
