@@ -1,4 +1,16 @@
 class _122_BestTimeToBuyAndSellStockII {
+    //redone
+    public int maxProfitt(int[] prices) {
+        int ans=0;
+        int min=Integer.MAX_VALUE;
+        for(int i=0;i<prices.length;i++){
+            if(prices[i]>min){//sell
+                ans+=prices[i]-min;
+            }
+            min=prices[i];
+        }
+        return ans;
+    }
     //buy on someday and sell on the first day we earn profit.
     public int maxProfit(int[] prices) {
         int profitMax=0;
