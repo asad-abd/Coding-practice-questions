@@ -1,5 +1,5 @@
 import java.util.*;
-class _493_INVERSIONS_Reverse_pairs_hard {
+class __493_INVERSIONS_Reverse_pairs_hard {
     //VVV IMP: don't change the merge sort algo. just add another linear loop to solve the additional problem!!
     
     //take lhs= [4,6,8] & rhs=[1,2,3].

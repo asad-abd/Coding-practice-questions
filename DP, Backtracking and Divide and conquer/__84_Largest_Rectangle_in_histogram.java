@@ -1,4 +1,4 @@
-public class _84_Largest_Rectangle_in_histogram {//lc_hard
+public class __84_Largest_Rectangle_in_histogram {//lc_hard
     //IMP
     //Idea: notice that the min area would be if we take just one height*1. so, keeping that in mind,
     //we will say that, consider the i'th height in full and find which heights on the left and right can also be taken with it.
