@@ -1,4 +1,5 @@
 import java.util.*;
+//try later with BST also
 class _493_INVERSIONS_Reverse_pairs_hard {
     //VVV IMP: don't change the merge sort algo. just add another linear loop to solve the additional problem!!
     
