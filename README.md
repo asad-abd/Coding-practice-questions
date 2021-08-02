@@ -1,2 +1,2 @@
-# LeetCode
-My codes for Leetcode questions
+# Data Structures and Algorithms practice
+My practice codes from Leetcode, GeeksForGeeks, Interview Bit, etc.
