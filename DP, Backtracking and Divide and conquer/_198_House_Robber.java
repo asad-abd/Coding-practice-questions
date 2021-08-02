@@ -1,10 +1,24 @@
 //classic dp problem
 class _198_House_Robber {
-    
+    //DL 29/06/21 - 0ms
+    public int knap(int nums[], int n, int[] t){
+        if(n <= 0) return 0;
+        
+        if(t[n] != -1) return t[n];
+        
+        return t[n] = Math.max(nums[n-1] + knap(nums, n - 2, t), knap(nums, n - 1, t));
+        
+    }
+    public int rob(int[] nums) {
+        int t[] = new int [nums.length+1];
+        for(int i = 0; i <= nums.length; i++)
+            t[i] = -1;
+        return knap(nums, nums.length, t);
+    }
 
     //memoization with hashmap solution: 264 ms (slow)
     HashMap<String,Integer> hmap = new HashMap<>();
-    public int rob(int[] nums) {
+    public int rob1(int[] nums) {
         int n=nums.length;
         if(n==0)
             return 0;
