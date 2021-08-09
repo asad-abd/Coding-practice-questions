@@ -1,3 +1,4 @@
+//R1 Aug done
 class _1218_LongestArithmeticSubsequenceOfGivenDifference {
     public int longestSubsequence(int[] arr, int difference) {
         HashMap<Integer,Integer> dp =new HashMap<>();

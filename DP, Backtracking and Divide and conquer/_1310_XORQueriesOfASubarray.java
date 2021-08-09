@@ -1,3 +1,4 @@
+//R1 Aug done
 class _1310_XORQueriesOfASubarray {
     public int[] xorQueries(int[] arr, int[][] queries) {
         

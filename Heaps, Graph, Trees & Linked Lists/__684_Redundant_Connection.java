@@ -1,3 +1,4 @@
+//R1 Aug Done
 import java.util.*;
 public class __684_Redundant_Connection {
     //2 methods, 1.Prims with edge wt being the order of arrival
@@ -60,7 +61,6 @@ public class __684_Redundant_Connection {
         }
         visited.add(edges[0][0]);
         while(pq.size()>0){
-            int size = pq.size();
             int curr[] = pq.poll();
             int vertex = curr[0];
             int parent = curr[1];

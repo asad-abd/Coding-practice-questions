@@ -1,3 +1,4 @@
+//IMP JAVA NOTE (from _338): Since == has higher precedence than &/^, (i-1) == 0 will be evaluated first and will result in boolean!!
 class ___1335_Minimum_Difficulty_of_a_Job_schedule
 {
     //redo later

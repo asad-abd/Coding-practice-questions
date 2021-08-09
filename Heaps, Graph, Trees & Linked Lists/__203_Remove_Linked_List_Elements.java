@@ -1,3 +1,4 @@
+//R1 Aug Done
 public class __203_Remove_Linked_List_Elements {
     //HHHH SMC - very frequently
     public ListNode removeElements(ListNode head, int val) {

@@ -1,3 +1,4 @@
+//R1 Aug done
 public class _1277_COUNT_SQUARE_submatrices_with_all_ones {
     //SOLUTION APPROACH : https://leetcode.com/problems/count-square-submatrices-with-all-ones/discuss/643429/Python-DP-Solution-%2B-Thinking-Process-Diagrams-(O(mn)-runtime-O(1)-space)
     

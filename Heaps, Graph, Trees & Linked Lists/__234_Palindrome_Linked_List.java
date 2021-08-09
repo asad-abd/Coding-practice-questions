@@ -1,3 +1,4 @@
+//R1 Aug done
 public class __234_Palindrome_Linked_List {
     //FAST and SLOW POINTERS
     //1 2 3 5 3 2 1 N
@@ -30,7 +31,7 @@ public class __234_Palindrome_Linked_List {
             nhead = curr;
             
             curr = curr_next;
-        }
+        }//come out of the loop when curr is end. assign its next outside of the loop
         curr.next = nhead;
         return curr;
     }

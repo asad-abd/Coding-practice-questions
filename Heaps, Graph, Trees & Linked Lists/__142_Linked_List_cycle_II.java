@@ -1,3 +1,4 @@
+//R1 Aug Done
 public class __142_Linked_List_cycle_II {
     //CODE SMC: write nested while and use s==f NOT s.val==f.val
     public ListNode detectCycle(ListNode head) {
