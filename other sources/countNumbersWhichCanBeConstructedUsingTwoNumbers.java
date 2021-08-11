@@ -1,8 +1,3 @@
-package other sources;
-
-public class c {
-    
-}
 
 class countNumbersWhichCanBeConstructedUsingTwoNumbers{ 
     // Returns count of numbers from 1 to n that can be formed 
