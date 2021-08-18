@@ -1,3 +1,4 @@
+//R1 Aug done
 public class _56_merge_intervals {
     public int[][] merge(int[][] intervals) {
         Arrays.sort(intervals, new Comparator<>(){
