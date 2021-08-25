@@ -1,3 +1,4 @@
+//R1 Aug done
 //logic: find the volume of water OVER index i. (that's it!)
 class _42_TrappingRainWater {
     // O(n^2)

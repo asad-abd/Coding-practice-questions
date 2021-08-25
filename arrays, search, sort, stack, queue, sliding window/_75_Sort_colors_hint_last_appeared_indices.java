@@ -1,3 +1,4 @@
+//R1 Aug done
 class _75_Sort_colors_hint_last_appeared_indices {
     //inplace and one pass logic
     //keep a note of the last index that each of 0, 1, 2 appeared at.
@@ -11,7 +12,7 @@ class _75_Sort_colors_hint_last_appeared_indices {
         for(int i=0;i<nums.length;i++){
             if(nums[i]==2){
                 last2++;
-                nums[last2]=2;
+                nums[last2]=2;n
             }
             else if(nums[i]==1){
                 last2++;

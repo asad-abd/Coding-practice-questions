@@ -1,6 +1,6 @@
 class _912_Sort_an_Array {
     //READ https://leetcode.com/problems/sort-an-array/discuss/492042/7-Sorting-Algorithms-(quick-sort-top-downbottom-up-merge-sort-heap-sort-etc.) for detail
-    //1. QuickSort (on own) - AC with the random swap part
+    //1. Quick Sort (on own) - AC with the random swap part
     //pivot is l. swap l with a random index in l-r
     //swap pivot+1 with the 'next' pointer.
     //then swap pivot with pivot++

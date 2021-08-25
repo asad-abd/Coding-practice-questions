@@ -1,3 +1,4 @@
+//R1 Aug Done
 class _730_HARD_Count_different_Palindromic_Subsequences {
     // Understanding brute force: (GFG comments) BEST EXPLANATION TO THIS ONE
     // 1. When char at i and j are equal, then count(i,j) = number of sequences INCLUDING-BOTH s[i] and s[j] (call it a) 
@@ -41,6 +42,35 @@ class _730_HARD_Count_different_Palindromic_Subsequences {
         return cps(s,0,n-1,t);
     }
 }
+
+//tried again in R1 Aug (couldn't get it correct this time aswell)
+long mod=(long)Math.pow(10,9)+7;
+    public int countPalindromicSubsequences(String str) {
+        int n=str.length();
+        char s[] = str.toCharArray();
+        int dp[][] = new int[n + 2][n + 2]; 
+        for(int i = 0; i <= n; i ++)
+            dp[i][i] = 1;
+        dp[0][0] = 0;
+        int difference = 1;
+        while(difference < n){
+            for(int i = difference + 1, j; i <= n; i ++){
+                j = i - difference;
+                
+                if(s[i - 1] == s[j - 1])
+                    dp[i][j] = (int)(((long)1 + (long)dp[i + 1][j - 1] + (long)dp[i + 1][j] + (long)dp[i][j - 1]) % mod); 
+                else
+                    dp[i][j] = (int)(( (long)dp[i + 1][j] + (long)dp[i][j - 1] ) % mod);
+            }
+            difference ++;
+        }
+        for(int i = 0; i <= n; i ++){
+            for(int j = 0; j <= n; j ++)
+                System.out.print(dp[i][j] + "   ");
+            System.out.println();
+        }
+        return dp[n][1];
+    }
 
 
     /* let m = str(i-1,j-1)
