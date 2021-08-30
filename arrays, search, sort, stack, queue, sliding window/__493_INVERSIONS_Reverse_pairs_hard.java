@@ -1,10 +1,5 @@
 import java.util.*;
-<<<<<<< HEAD:arrays, search, sort, stack, queue, greedy, sliding window/__493_INVERSIONS_Reverse_pairs_hard.java
 class __493_INVERSIONS_Reverse_pairs_hard {
-=======
-//try later with BST also
-class _493_INVERSIONS_Reverse_pairs_hard {
->>>>>>> 36525cddde9d0a3e16bfcbdd9cfd130c1b563e02:arrays, search, sort, stack, queue, greedy, sliding window/_493_INVERSIONS_Reverse_pairs_hard.java
     //VVV IMP: don't change the merge sort algo. just add another linear loop to solve the additional problem!!
     
     //take lhs= [4,6,8] & rhs=[1,2,3].

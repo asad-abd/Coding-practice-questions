@@ -1,4 +1,36 @@
+//R1 Aug done
 class _416_PartitionEqualSubsetSum_Knapsack {
+    //R1 Aug: rec + memo (the previous bottom up solution seems un-intuitive now (after 8 mths))
+    //TLE without t[][]
+    public boolean knapsack(int arr[], int n, int sum, int [][] t){
+        if(sum == 0)
+            return true;
+        if(sum < 0 || n == 0) // && sum != 0
+            return false;
+        //if(t[n][sum] == 1 || t[n][sum] == 2)
+            return t[n][sum] == 1 ? false : true;
+        //else
+        boolean ans = false;
+        //choose
+        ans = ans | knapsack(arr, n - 1, sum - arr[n - 1], t);
+        //not choose
+        ans = ans | knapsack(arr, n - 1, sum, t);
+        if(ans == true)
+            t[n][sum] = 2;
+        else
+            t[n][sum] = 1;
+        return ans;
+    }
+    public boolean canPartition(int[] nums) {
+        int total = 0;
+        for(int num: nums)
+            total += num;
+        if(total % 2 != 0) return false;
+        
+        int [][] t = new int[nums.length + 1][total + 1];
+        return knapsack(nums, nums.length, total / 2, t);
+    }
+
     // my thinking and approach: 0-1 knapsack
     // a1, a2. a3 .... ai,...an
     // first i numbers: first 1 numbers: |-> pick a1 => sum=a1 (dp[1][sum=a1]=true)
