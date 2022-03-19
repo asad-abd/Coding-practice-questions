@@ -1,3 +1,4 @@
+//R1 Sep done
 public class __92_Reverse_Linked_List_II {
     //NICE DISCUSS: https://leetcode.com/problems/reverse-linked-list-ii/discuss/30709/Talk-is-cheap-show-me-the-code-(and-DRAWING)
     public ListNode reverseBetween(ListNode head, int l, int r) {
@@ -10,6 +11,7 @@ public class __92_Reverse_Linked_List_II {
         }
         tail = left.next;
         while(count < r - 1){
+            //R1: I over complicated the mppings, read the discuss for simpler version
             ListNode temp = left.next;
             ListNode tail2next = tail.next.next;
             

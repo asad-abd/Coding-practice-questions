@@ -1,4 +1,4 @@
-
+//R1 sep done
 class _98_ValidateBinarySearchTree {
     // my solution.- get an inorder traversal list and if tree is
     // BST, list should be in ascending order
