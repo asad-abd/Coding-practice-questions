@@ -1,4 +1,29 @@
 class _322_CoinChange {
+    // @aton
+    public int minCoins(int[] coins, int amt, int n, int t[][]){
+        // 2 options if the amt > the nth coin 
+        // -> consider the nth coin or forget it and computer ahead without it. 
+        if(n < 0 && amt > 0)
+            return Integer.MAX_VALUE - 1;
+        if(amt == 0)
+            return 0;
+        if(t[n + 1][amt] != -1)
+            return t[n + 1][amt];
+        if(amt < coins[n])
+            return t[n + 1][amt] = minCoins(coins, amt, n - 1, t);
+        
+        return t[n + 1][amt] = Math.min(1 + minCoins(coins, amt - coins[n], n, t), minCoins(coins, amt, n - 1, t));
+    }
+    public int coinChange(int[] coins, int amount) {
+        int dp[][] = new int[coins.length+1][amount+1];
+        for(int i = 0; i <= coins.length; i++)
+            for(int j = 0; j <= amount; j++)
+                dp[i][j] =- 1;
+        int ans = minCoins(coins, amount, coins.length - 1, dp);
+        
+        return ans == Integer.MAX_VALUE - 1 || ans == Integer.MAX_VALUE ? -1: ans;
+    }
+
     //CATCH in the base condition. watch for details: https://www.youtube.com/watch?v=I-l6PBeERuc&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=16
     //an additional row is pre-initialized
     
