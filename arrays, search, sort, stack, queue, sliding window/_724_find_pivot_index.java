@@ -1,4 +1,21 @@
 public class _724_find_pivot_index {
+    // 2/23: first instinct, basic
+    public int pivotIndex(int[] nums) {
+        int sum = 0;
+        for(int num: nums)
+            sum += num;
+        
+        int t = 0;
+        for(int i = 0; i < nums.length; i ++){
+            if(i > 0)
+                t += nums[i - 1];
+            if (t == sum - t - nums[i])
+                return i;
+        }
+        return -1;
+    }
+
+    // old: donno what is this overcomplication
     public int pivotIndex(int[] nums) {
         int n = nums.length;
         if(n<1) return -1;
